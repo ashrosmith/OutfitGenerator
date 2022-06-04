@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OutfitGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pants" translatesAutoresizingMaskIntoConstraints="NO" id="qKT-7E-c26">
+                                <rect key="frame" x="69.666666666666686" y="367" width="300" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="6Yh-4D-NSF"/>
+                                    <constraint firstAttribute="width" constant="300" id="GMf-pi-DES"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-Xs-Qe2">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <color key="barTintColor" red="1" green="0.90196078430000004" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                    <color key="textColor" red="0.2156862745" green="0.023529411760000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Outfit Generator" largeTitleDisplayMode="always" id="6dg-nG-p3C">
+                                        <barButtonItem key="leftBarButtonItem" title="Add Clothes" id="kYM-Pz-KBO">
+                                            <connections>
+                                                <action selector="addClothesButton:" destination="BYZ-38-t0r" id="3Mk-k9-fxn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Randomize " id="k7F-RH-rc6">
+                                            <connections>
+                                                <action selector="randomizeButton:" destination="BYZ-38-t0r" id="HU3-z9-sbg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-2S-hpz">
+                                <rect key="frame" x="139" y="703" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6tZ-qX-VMV"/>
+                                    <constraint firstAttribute="width" constant="150" id="FXO-u5-cN3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-nY-p2C">
+                                <rect key="frame" x="81.666666666666686" y="103.66666666666669" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="FQw-ms-5Bn"/>
+                                    <constraint firstAttribute="height" constant="250" id="g1v-ip-yS3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YDM-2S-hpz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="315" id="2cQ-cB-uXq"/>
+                            <constraint firstItem="pb6-Xs-Qe2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Lf-S4-0WP"/>
+                            <constraint firstItem="pb6-Xs-Qe2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="B6a-Yf-oiV"/>
+                            <constraint firstItem="qKT-7E-c26" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BHU-Yi-OCG"/>
+                            <constraint firstItem="g2U-nY-p2C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-234.5" id="Gdm-li-rYD"/>
+                            <constraint firstItem="qKT-7E-c26" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I1A-OE-XiA"/>
+                            <constraint firstItem="YDM-2S-hpz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="240" id="JYc-FE-AG2"/>
+                            <constraint firstItem="pb6-Xs-Qe2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PqM-rY-ShM"/>
+                            <constraint firstItem="YDM-2S-hpz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WYl-Yd-xO4"/>
+                            <constraint firstItem="qKT-7E-c26" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5.5" id="ekY-nv-Bdu"/>
+                            <constraint firstItem="g2U-nY-p2C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-7.5" id="gJ3-Tr-T8g"/>
+                            <constraint firstItem="g2U-nY-p2C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hza-ux-3XB"/>
+                            <constraint firstItem="g2U-nY-p2C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-280" id="ica-iW-uba"/>
+                            <constraint firstItem="YDM-2S-hpz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jIU-TT-rBa"/>
+                            <constraint firstItem="qKT-7E-c26" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="66.5" id="n03-LM-VXl"/>
+                            <constraint firstItem="pb6-Xs-Qe2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xC3-JA-Rg8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gdm-li-rYD"/>
+                                <exclude reference="gJ3-Tr-T8g"/>
+                                <exclude reference="hza-ux-3XB"/>
+                                <exclude reference="ica-iW-uba"/>
+                                <exclude reference="BHU-Yi-OCG"/>
+                                <exclude reference="I1A-OE-XiA"/>
+                                <exclude reference="ekY-nv-Bdu"/>
+                                <exclude reference="n03-LM-VXl"/>
+                                <exclude reference="2cQ-cB-uXq"/>
+                                <exclude reference="JYc-FE-AG2"/>
+                                <exclude reference="WYl-Yd-xO4"/>
+                                <exclude reference="jIU-TT-rBa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="hza-ux-3XB"/>
+                                <include reference="ica-iW-uba"/>
+                                <include reference="BHU-Yi-OCG"/>
+                                <include reference="I1A-OE-XiA"/>
+                                <include reference="JYc-FE-AG2"/>
+                                <include reference="jIU-TT-rBa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="Gdm-li-rYD"/>
+                                <include reference="gJ3-Tr-T8g"/>
+                                <include reference="ekY-nv-Bdu"/>
+                                <include reference="n03-LM-VXl"/>
+                                <include reference="2cQ-cB-uXq"/>
+                                <include reference="WYl-Yd-xO4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pantsImageView" destination="qKT-7E-c26" id="Qys-bw-eSe"/>
+                        <outlet property="shirtImageView" destination="g2U-nY-p2C" id="npf-zp-Ej1"/>
+                        <outlet property="shoesImageView" destination="YDM-2S-hpz" id="TSb-Me-vVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.20784313725490194" green="0.48627450980392156" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="pants" width="250" height="250"/>
+        <image name="shirt" width="200" height="200"/>
+        <image name="shoes" width="100" height="100"/>
+    </resources>
+</document>

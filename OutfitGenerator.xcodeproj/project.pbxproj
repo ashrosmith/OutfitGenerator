@@ -13,6 +13,10 @@
 		395AA7C627C01D6300BFAE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395AA7C427C01D6300BFAE86 /* Main.storyboard */; };
 		395AA7C827C01D6600BFAE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 395AA7C727C01D6600BFAE86 /* Assets.xcassets */; };
 		395AA7CB27C01D6600BFAE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395AA7C927C01D6600BFAE86 /* LaunchScreen.storyboard */; };
+		395AA7E027C1640400BFAE86 /* ClothingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 395AA7DF27C1640400BFAE86 /* ClothingClassifier.mlmodel */; };
+		395AA7E227C167BE00BFAE86 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395AA7E127C167BE00BFAE86 /* Clothing.swift */; };
+		39A42B3727C83FA000947C52 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39A42B3627C83FA000947C52 /* Defaults.plist */; };
+		39FBE40E2835E93100A545D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FBE40D2835E93100A545D5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		395AA7C727C01D6600BFAE86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		395AA7CA27C01D6600BFAE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		395AA7CC27C01D6600BFAE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		395AA7DF27C1640400BFAE86 /* ClothingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ClothingClassifier.mlmodel; sourceTree = "<group>"; };
+		395AA7E127C167BE00BFAE86 /* Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
+		39A42B3627C83FA000947C52 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		39FBE40D2835E93100A545D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 		395AA7B227C01D6200BFAE86 = {
 			isa = PBXGroup;
 			children = (
+				39A42B3627C83FA000947C52 /* Defaults.plist */,
 				395AA7BD27C01D6300BFAE86 /* OutfitGenerator */,
 				395AA7BC27C01D6300BFAE86 /* Products */,
 			);
@@ -58,13 +67,48 @@
 			children = (
 				395AA7BE27C01D6300BFAE86 /* AppDelegate.swift */,
 				395AA7C027C01D6300BFAE86 /* SceneDelegate.swift */,
-				395AA7C227C01D6300BFAE86 /* ViewController.swift */,
-				395AA7C427C01D6300BFAE86 /* Main.storyboard */,
-				395AA7C727C01D6600BFAE86 /* Assets.xcassets */,
-				395AA7C927C01D6600BFAE86 /* LaunchScreen.storyboard */,
+				395AA7E327C169BB00BFAE86 /* Model */,
+				395AA7E527C169DE00BFAE86 /* View */,
+				395AA7E427C169CF00BFAE86 /* Controller */,
+				39FBE40F2835EA1E00A545D5 /* Supporting Files */,
 				395AA7CC27C01D6600BFAE86 /* Info.plist */,
 			);
 			path = OutfitGenerator;
+			sourceTree = "<group>";
+		};
+		395AA7E327C169BB00BFAE86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				395AA7DF27C1640400BFAE86 /* ClothingClassifier.mlmodel */,
+				395AA7E127C167BE00BFAE86 /* Clothing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		395AA7E427C169CF00BFAE86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				395AA7C227C01D6300BFAE86 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		395AA7E527C169DE00BFAE86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				395AA7C427C01D6300BFAE86 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39FBE40F2835EA1E00A545D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39FBE40D2835E93100A545D5 /* Constants.swift */,
+				395AA7C727C01D6600BFAE86 /* Assets.xcassets */,
+				395AA7C927C01D6600BFAE86 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,8 @@
 			dependencies = (
 			);
 			name = OutfitGenerator;
+			packageProductDependencies = (
+			);
 			productName = OutfitGenerator;
 			productReference = 395AA7BB27C01D6300BFAE86 /* OutfitGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +157,8 @@
 				Base,
 			);
 			mainGroup = 395AA7B227C01D6200BFAE86;
+			packageReferences = (
+			);
 			productRefGroup = 395AA7BC27C01D6300BFAE86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A42B3727C83FA000947C52 /* Defaults.plist in Resources */,
 				395AA7CB27C01D6600BFAE86 /* LaunchScreen.storyboard in Resources */,
 				395AA7C827C01D6600BFAE86 /* Assets.xcassets in Resources */,
 				395AA7C627C01D6300BFAE86 /* Main.storyboard in Resources */,
@@ -140,7 +189,10 @@
 			files = (
 				395AA7C327C01D6300BFAE86 /* ViewController.swift in Sources */,
 				395AA7BF27C01D6300BFAE86 /* AppDelegate.swift in Sources */,
+				395AA7E227C167BE00BFAE86 /* Clothing.swift in Sources */,
 				395AA7C127C01D6300BFAE86 /* SceneDelegate.swift in Sources */,
+				395AA7E027C1640400BFAE86 /* ClothingClassifier.mlmodel in Sources */,
+				39FBE40E2835E93100A545D5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
