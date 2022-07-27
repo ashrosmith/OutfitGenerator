@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct K {
+public struct K {
     
     static let shirtArray = "shirtArray"
     static let pantsArray = "pantsArray"

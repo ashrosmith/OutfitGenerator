@@ -72,7 +72,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     
    // MARK: - CoreML Processing
     
-    func detect(image: CIImage, fileName: String) {
+    private func detect(image: CIImage, fileName: String) {
         guard let model = try? VNCoreMLModel(for: ClothingClassifier(configuration: MLModelConfiguration()).model) else {
             fatalError("CoreML Model failed to load.")
         }
@@ -102,7 +102,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     
     //MARK: - Save/Load Image
     
-    func saveImage(fileName: String, image: UIImage) {
+    private func saveImage(fileName: String, image: UIImage) {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { fatalError("Could not retrieve document directory.")
         }
         let fileURL = documentsDirectory.appendingPathComponent(fileName)
@@ -124,7 +124,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
         }
     }
 
-    func loadImageFromDiskWith(fileName: String) -> UIImage? {
+    private func loadImageFromDiskWith(fileName: String) -> UIImage? {
         let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
         let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
         let paths = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
